@@ -1,0 +1,18 @@
+<package format="3">
+  <name>safety_stop_jo</name>
+  <version>0.0.1</version>
+  <description>LiDAR one-shot safety stop</description>
+  <maintainer email="you@example.com">you</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>ament_index_python</exec_depend> <!-- get_package_share_directory 사용 시 필요 -->
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>kitauto_bringup_jo</name>
+  <version>0.0.1</version>
+  <description>Bringup for full car stack (drivetrain, sensors, tf, ekf, gps)</description>
+
+  <maintainer email="pw@example.com">pw</maintainer>
+  <license>MIT</license>
+
+  <!-- Build tool -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- Launch-time deps -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+
+  <!-- Nodes used directly -->
+  <exec_depend>drive_steer_bridge</exec_depend>
+  <exec_depend>realsense2_camera</exec_depend>
+  <exec_depend>sllidar_ros2</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>imu_filter_madgwick</exec_depend>
+  <exec_depend>ublox_gps</exec_depend>
+
+  <!-- Must-exist includes (필수) -->
+  <exec_depend>kitauto_odometry</exec_depend>
+  <exec_depend>ekf_jo</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+

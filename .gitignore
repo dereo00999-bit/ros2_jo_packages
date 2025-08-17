@@ -1,0 +1,8 @@
+# ROS2 workspace artifacts
+build/
+install/
+log/
+.colcon_cache/
+**/__pycache__/
+*.pyc
+*.swp

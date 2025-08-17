@@ -1,0 +1,14 @@
+safety_stop_jo:
+  ros__parameters:
+    trigger_dist_m: 2.0
+    fov_deg: 50.0
+    center_deg: 180.0
+    frames_confirm: 2
+    min_speed_cps: 0.0
+    one_shot: true
+    publish_cmd_stop: true
+    auto_resume_enable: true     # ✅ 정지 후 자동 재출발(오토-릴록)
+    auto_resume_sec: 5.0         # ✅ 정지 후 5초 뒤 /cmd_relock 1회 발행
+    scan_topic: "/scan"
+    wheel_cps_topic: "/wheel_cps"
+    relock_topic: "/cmd_relock"
