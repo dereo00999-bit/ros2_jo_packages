@@ -1,0 +1,9 @@
+navsat_transform:
+  ros__parameters:
+    use_odometry_yaw: false
+    zero_altitude: true
+    publish_filtered_gps: false
+    broadcast_cartesian_transform: true   # (Jazzy; replaces broadcast_utm_transform)
+    wait_for_datum: false
+    yaw_offset: 0.0
+    magnetic_declination_radians: 0.0

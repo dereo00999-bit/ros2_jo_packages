@@ -1,0 +1,30 @@
+ekf_map:
+  ros__parameters:
+    frequency: 30.0
+    sensor_timeout: 0.2
+    two_d_mode: true
+    publish_tf: true
+
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_footprint
+    world_frame: map
+
+    # Reuse your wheel-odometry velocities for smooth motion
+    odom0: /odom
+    odom0_config: [false,false,false,  false,false,false,
+                   true, false,false,  false,false,true,  false,false,false]
+    odom0_differential: false
+    odom0_relative:     false
+
+    # Fuse GPS position from navsat (position only; no yaw)
+    odom1: /odometry/gps
+    odom1_config: [true,true,false,   false,false,false,
+                   false,false,false, false,false,false, false,false,false]
+    odom1_differential: false
+    odom1_relative:     false
+
+    # Do NOT fuse absolute yaw here (no earth-referenced heading available).
+    # If later you add mag or GNSS heading, you can enable imu yaw here (and only here).
+    # imu0: /imu/data
+    # imu0_config: [false,false,false,  false,false,true,   false,false,false,  false,false,true,  false,false,false]
